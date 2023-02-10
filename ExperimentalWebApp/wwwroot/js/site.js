@@ -49,17 +49,4 @@ function onFormPost() {
         },
         dataType: "json"
     });
-
-    //var request = { Company: sapws.dbName, UserName: username, Password: userpass };
-    //console.log(request);
-    //$.ajax({
-    //    type: "POST",
-    //    url: this.wsUrl + "/Login",
-    //    contentType: "text/plain",
-    //    data: JSON.stringify(request),
-
-    //    crossDomain: true,
-    //});
-
-
 }
