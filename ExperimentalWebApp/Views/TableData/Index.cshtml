@@ -1,0 +1,67 @@
+﻿@model ExperimentalWebApp.Models.TableDataView
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="row">
+    <div class="col">
+        <button class="btn btn-primary" onclick="onGetTableData(0)">Get data as table</button>
+        <button class="btn btn-primary" onclick="onGetTableData(1)">Get data as JSON</button>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Title</th>
+                <th scope="col">Status</th>
+                <th scope="col">Date Creation/Modified</th>
+                <th scope="col">Description</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody id="idTableData">
+            </tbody>
+        </table>
+    </div>
+    <div class="col">
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-dark offset-11 my-1" onclick="onFormClear()">Clear</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label class="form-label" for="title">Title</label>
+                <input type="text" class="form-control" value="" id="title"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label class="form-label" for="status">Status</label>
+                <input type="text" class="form-control" value="" id="status"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label class="form-label" for="description">Status</label>
+                <textarea class="form-control" rows="4" value="" id="description"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-success offset-11 my-1" onclick="onFormPost()">Post</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts
+{
+    <script src="lib/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.js"></script>
+}
